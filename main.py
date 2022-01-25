@@ -20,8 +20,6 @@ async  def search(session, soup):
             worksheet.write(index, 0, company.a.get("title"))
             worksheet.write(index, 1, amount)
             index += 1
-        if index == 5:
-            break
     workbook.close()
 
 async  def get_dividend(session, url):
